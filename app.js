@@ -9,7 +9,7 @@ const form = document.getElementById("form");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   axios
-    .get("https://crudcrud.com/api/696ba6e3c4ec409284c9c498ec38d9b6/addItem")
+    .get("https://crudcrud.com/api/200523a827ae41d4afdcb6c64fd9ab86/addItem")
     .then((res) => {
       console.log(res);
       for (const data of res.data) {
@@ -85,7 +85,7 @@ button.addEventListener("click", (e) => {
     span.style = "display : none";
 
     axios.post(
-      "https://crudcrud.com/api/696ba6e3c4ec409284c9c498ec38d9b6/addItem",
+      "https://crudcrud.com/api/200523a827ae41d4afdcb6c64fd9ab86/addItem",
       {
         cost: p1.innerText,
         item: p2.innerText,
@@ -105,7 +105,7 @@ items.addEventListener("click", (e) => {
     console.log("DELETE");
 
     axios
-      .get("https://crudcrud.com/api/696ba6e3c4ec409284c9c498ec38d9b6/addItem")
+      .get("https://crudcrud.com/api/200523a827ae41d4afdcb6c64fd9ab86/addItem")
       .then((res) => {
         //console.log(res);
         for (const data of res.data) {
@@ -114,7 +114,7 @@ items.addEventListener("click", (e) => {
             console.log(delId);
             axios
               .delete(
-                `https://crudcrud.com/api/696ba6e3c4ec409284c9c498ec38d9b6/addItem/${delId}`
+                `https://crudcrud.com/api/200523a827ae41d4afdcb6c64fd9ab86/addItem/${delId}`
               )
               .then((res) => console.log(res + "Deleted"))
               .catch((err) => console.error(err));
